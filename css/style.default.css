@@ -1,0 +1,143 @@
+/*------------------------------------------------------------------------------------
+  Project: SFDC Console Styling
+  File: style.default.css
+  Creator: Cory Perry (New Media - IPS Packaging)
+  Created: 08/31/2014
+======================================================================================
+  Last Updated: 12/6/2014  -- CP
+======================================================================================
+
+/* 01. RESETS & IMPORTS ----------------------------------------------------------- */
+
+
+/* 02. DEFAULT STYLING ------------------------------------------------------------ */
+
+
+/* 1. General
+---------------------------------------------------------- */
+
+body {
+	margin: 0; padding: 0;
+	color:#333333;
+	font-size: 1.0em;
+	font-family: Helvetica, Arial, sans-serif;
+}
+
+
+/* 2. Typography
+---------------------------------------------------------- */
+
+/* paragraphs ---------------*/
+
+p { font-size: 1.0em; line-height: 1.4; margin: 0 0 3% 0;}
+
+
+/* lists --------------------*/
+
+ul { font-size: 1.0em; margin: 2% 0 2% 0; padding: 0; list-style: none; }
+li {margin: 0 0 5px 0 !important;}
+ol { list-style:decimal outside; }
+ol, dd{ margin-left:24px; }
+ul ul, ol ul, ul ol, ol ol { margin-bottom:0; margin-top:0; }
+dl, dd, dt { margin: 0; }
+
+/* headers ------------------*/
+
+h1,h2,h3,h4,h5,h6{
+	font-weight: 300 !important;
+	letter-spacing: normal;
+	color: #23619C;
+	line-height:100%;
+}
+
+/* set default header font sizes */
+h1{font-size: 1.95em !important;}
+h2{font-size: 1.62em !important;}
+h3{font-size: 1.25em;}
+h4{font-size: 1.5em;}
+h5{font-size: 1.4em;}
+h6{font-size: 0.75em;}
+
+.x-btn-large {
+	font-weight: bold!important;
+	font-size: 12px;
+}
+/* 3. Elements
+---------------------------------------------------------- */
+
+.divider {
+	clear:both;
+	display:block;
+    margin: 8px 0 8px 0;
+	width:100%;
+	border-top: 1px solid #ccc;
+}
+
+
+/* default module styling ------------------------- */
+
+.std-module {
+	padding: 10px; margin: 10px;
+	background: #f5f5f5;
+	border-top: 8px solid #C2BDBE;
+}
+
+.inline-module {
+	padding: 10px; margin: 10px;
+	background: #ffffff;
+	border-top: 8px solid #C2BDBE;
+}
+
+.one-half {
+	margin: 10px 25px 10px 0;
+	width: 500px;
+	float: left;
+	height: auto;
+	overflow: auto;
+}
+.one-half-last {
+	margin: 10px 0px 10px 0;
+	width: 500px;
+	float: left;
+	height: auto;
+	overflow: auto;
+}
+
+/* specific module styling ------------------------- */
+
+#report-container {
+	height: auto;
+	overflow: auto;
+	display: block;
+	}
+
+/* account data grid */
+
+.data-grid {
+	position: relative;
+	margin: 0 auto;
+}
+.data-panel {
+	background: #DCDCDC;
+	border-top: 8px solid #3CD999;
+	padding: 20px 60px 20px 30px;
+	margin: 0 3px 0 3px;
+	width: auto;
+	float: left;
+}
+
+h3.data-panel-header {
+	font-size: 1.1em;
+	color: #1797C0;
+	font-weight: 900 !important;
+}
+
+p.data-panel-data { 
+	font-size: 1.8em;
+	font-weight: 900;
+	color: #4B4B4B; 
+	line-height: 1.4; 
+	margin: 0 !important;}
+
+/* END
+-------------------------------------------------------------------------------*/

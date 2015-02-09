@@ -6,10 +6,10 @@
 The CSS folder contains stylesheets that get included in VF pages and custom console components.
 
 <h3>Templates</h3>
-The Tempaltes folder contains templates to use for VF pages and components.
+The Templates folder contains templates to use for VF pages and components.
 
 <h3>Components</h3>
-The Components folder contains finished components that ca be used as custom VF components in Salesforce and Salesforce console applications.
+The Components folder contains finished components that can be used as custom VF components in Salesforce and Salesforce console applications.
 
 
 
