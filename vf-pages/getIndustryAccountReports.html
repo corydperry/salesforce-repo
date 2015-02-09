@@ -1,0 +1,21 @@
+<apex:page doctype="html-5.0" standardController="Account" showHeader="false" standardStylesheets="false">
+<apex:stylesheet value="https://www.ipack.com/central_media/assets/salesforce/css/style.default.css"/>
+<script src="/support/console/32.0/integration.js" type="text/javascript"></script>
+
+
+<h2>SIC Trends and Gap Analysis Reports</h2>
+<div class="divider"></div>
+	<!-- load up a bootstrap container -->
+	<div class="container">
+	<div class="row">
+		<!-- embed SIC product pull report chart -->
+		<div class="col-md-6">
+		  <analytics:reportChart reportId="00Oi0000005jpmD" cacheResults="true" size="medium" filter="[{column:'Order.Account.SicDesc', operator:'equals', value:'{!Account.SicDesc}'}]"></analytics:reportChart>
+		</div>
+		<!-- embed product pull by account report chart -->
+		<div class="col-md-6">
+		  <analytics:reportChart reportId="00Oi0000005jhBz" cacheResults="true" size="medium" filter="[{column:'Order.Account.Id', operator:'equals', value:'{!Account.Id}'}]"></analytics:reportChart>
+		</div>
+	</div>
+	</div>
+</apex:page>
