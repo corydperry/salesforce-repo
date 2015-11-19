@@ -1,0 +1,27 @@
+trigger UpdateLastTouchOnAccount on Task (after insert, after update) {
+
+//Create a set of related account ID's
+Set <ID> acctIDs = new Set <ID> ();
+
+for (Task t: Trigger.new){
+    if (t.accountID != NULL){
+    acctIDs.add(t.accountID);
+//Create a map to match the task related to ID's with their corresponding account ID's
+    Map<ID, Account> acctMap = new Map<ID, Account> ([Select ID, Last_Touch__c from Account where ID in :acctIDs]);
+
+//Create the account object
+  Account acctRec = acctMap.get(t.accountID);
+
+//Check to see if the Last_Touch__c field is NULL
+//or older than the latest completed activity
+  If (acctMap.get(t.accountID).Last_Touch__c == NULL ||
+        acctMap.get(t.accountID).Last_Touch__c < t.LastModifiedDate) {
+//Update the Last_Touch__c field on the account object with the task's last modified date
+        acctrec.Last_Touch__c = t.LastModifiedDate;
+    }
+  //Update the account record
+  update acctRec;
+
+      } //End the if statement
+  } //End the for loop
+}
